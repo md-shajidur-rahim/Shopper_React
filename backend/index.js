@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 app.get("/admin", (req, res) => {
   if (!process.env.DEBUG_PORT)
     res.render(path.join(__dirname, "/public/dist/index.html"));
-  else res.redirect(`http://localhost:${process.env.DEBUG_PORT}/`);
+  else res.redirect(`/${process.env.DEBUG_PORT}/`);
 });
 
 // Image Storage Engine
@@ -52,7 +52,7 @@ app.use("/images", express.static("upload/images"));
 app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`,
+    image_url: `/images/${req.file.filename}`,
   });
 });
 
