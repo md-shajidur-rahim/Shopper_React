@@ -1,0 +1,10 @@
+.admin {
+    display: flex;
+    background: linear-gradient(180deg, #ff4141, white 90%);
+}
+
+@media(max-width:800px) {
+    .admin {
+        flex-direction: column;
+    }
+}
