@@ -9,7 +9,7 @@ const ListProduct = () => {
 
   // Function to fetch and update product information from the server
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/allproducts")
+    await fetch("/allproducts")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -23,7 +23,7 @@ const ListProduct = () => {
 
   // Function to remove a product
   const remove_product = async (id) => {
-    await fetch("http://localhost:4000/removeproduct", {
+    await fetch("/removeproduct", {
       method: "POST",
       headers: {
         Accept: "application/json",

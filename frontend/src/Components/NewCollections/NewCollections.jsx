@@ -12,7 +12,7 @@ const NewCollections = () => {
   // To fetch new collections when the component mounts 
   // The fetched data is then stored in the newcollections state
   useEffect(() => {
-    fetch('http://localhost:4000/newcollections')
+    fetch('/newcollections')
     .then((response) => response.json())
     .then((data) => setNew_collection(data));
   },[])

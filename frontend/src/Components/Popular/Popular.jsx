@@ -11,7 +11,7 @@ const Popular = () => {
   // To fetch popular products when the component mounts 
   // The fetched data is then stored in the popularProducts state
   useEffect(() => {
-    fetch('http://localhost:4000/popularinwomen')
+    fetch('/popularinwomen')
       .then((response) => response.json())
       .then((data) => setPopularProducts(data));
   }, []);
